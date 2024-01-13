@@ -22,9 +22,9 @@
     </header>
 
     <section id="competences">
-        <h2>Compétences</h2>
+        <h2>Compétences</h2><br>
         <div class="competence">
-            <span>HTML :</span>
+            <span>HTML :</span><br>
             <div class="progress">
                 <div class="progress-bar" style="width: 90%;">90%</div>
             </div>
@@ -89,11 +89,13 @@
         <div class="langue">
             <span>Anglais - Intermédiaire (B1)</span>
             <div class="progress">
+                <br>
                 <div class="progress-bar" style="width: 58%;">58%</div>
             </div>
         </div>
         <div class="langue">
             <span>Espagnol - Élémentaire (A2):</span>   <a href="attestation  l ecole  des langues espagnol a1_page-0001.jpg">A1 </a> | <a href="attestation  l ecole  des langues espagnol a2_page-0001.jpg">A2</a></p>
+            <br>
             <div class="progress">
                 <div class="progress-bar" style="width: 35%;">35%</div>
             </div>
@@ -139,8 +141,33 @@
                 <p>Email: nabil.saied@ecoles-epsi.net</p>
                 <a href="https://www.linkedin.com/in/nabil-saied-b77a842a0/" target="_blank" class="cv-link">LinkedIn</a>
             </div>
-             <a href="CV-NABIL-SAIED (1).pdf (1).pdf" class="download-btn cv-link" download>Télécharger mon CV</a>
+            <a href="CV-NABIL-SAIED (1).pdf (1).pdf" class="download-btn cv-link" download>Télécharger mon CV</a>
         </div>
     </footer>
 </body>
+<script>
+    function animateProgressBars() {
+        var progressBars = document.querySelectorAll('.progress-bar');
+
+        progressBars.forEach(function(bar) {
+            var width = 0;
+            var targetWidth = bar.style.width.replace('%', ''); // Extrait le pourcentage sans le symbole '%'
+            var id = setInterval(frame, 20); // Ajustez la vitesse d'animation ici
+
+            function frame() {
+                if (width >= targetWidth) {
+                    clearInterval(id);
+                } else {
+                    width++; 
+                    bar.style.width = width + '%'; 
+                    bar.textContent = width + '%';
+                }
+            }
+        });
+    }
+
+    // Démarrer l'animation des barres de progression au chargement de la page
+    window.onload = animateProgressBars;
+</script>
+
 </html>
