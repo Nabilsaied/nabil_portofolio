@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Oswald:wght@300&display=swap');
+
+
 body {
   font-family: 'Noto Sans JP', sans-serif; 
   color: #333;
@@ -8,12 +9,12 @@ body {
   margin: 0;
   padding: 0;
 }
+
 nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
   position: sticky;
   top: 0;
 }
@@ -24,40 +25,58 @@ nav .profile {
 }
 
 nav .profile img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 60%;
+  margin-left: 20px;
+  margin-top: 25px;
 }
 
 nav .profile h1 {
-  margin-left: 10px;
-  font-size: 25px; 
-  font-family: 'Oswald', sans-serif;
+  margin-left: 55px;
+  margin-top: 10%;
+  font-size: 25px;
+  font-family: 'LemonStatic', sans-serif;
+  color: #333; 
 }
+
 nav ul {
   display: flex;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 20px; /* Espace entre la liste et les éléments suivants */
 }
 
 nav ul li {
   margin-left: 20px;
   cursor: pointer;
+  transition: color 0.3s; /* Transition douce pour le survol */
 }
-nav ul li {
-  border-bottom: none;
+
+nav ul li:hover {
+  height: 100%;
 }
 
 nav a {
   color: #333;
   text-decoration: none;
   font-size: 1em;
+  transition: color 0.3s; /* Transition douce pour le survol */
 }
+
+nav a:hover {
+  height: 100%;
+}
+
+
 footer {
   background-color: #333;
   color: #ffffff;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px 0;*
 }
+
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -68,6 +87,7 @@ footer {
     margin: 10px 0;
   }
 }
+
 section {
   margin: 40px auto;
   padding: 20px;
@@ -79,21 +99,17 @@ h2 {
   color: #333;
   margin-bottom: 15px;
 }
-footer {
-  background-color: #333;
-  color: #ffffff;
-  text-align: center;
-  padding: 20px 0;
-}
 
 footer a {
   color: #ffffff;
   text-decoration: none;
   transition: text-decoration 0.3s;
 }
+
 footer a:hover {
   text-decoration: underline;
 }
+
 .project, .competence, .langue {
   margin-bottom: 20px;
 }
@@ -101,35 +117,29 @@ footer a:hover {
 .project img, .competence .progress, .langue .progress {
   width: 100%;
 }
-.progress {
-  background-color: #ddd;
-  border-radius: 20px;
-  height: 30px;
-  overflow: hidden;
-}
-.progress-bar {
-  background: linear-gradient(45deg, #6D5BBA, #FFD700);
-  height: 100%;
-  line-height: 30px;
-  color: white;
-  text-align: center;
-}
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  nav ul li {
-    margin: 10px 0;
-  }
+.progress-container {
+  width: 100%;
+  background-color: #ccc;
 }
+
+.progress-bar {
+  width: 0%;
+  height: 30px;
+  background: linear-gradient(45deg, grey, white);
+  text-align: center;
+  line-height: 30px;
+  color: black;
+  border-radius: 20px;
+}
+
 #curriculum-vitae {
   background-color: #f8f8f8;
   margin: 40px auto;
   padding: 20px;
   max-width: 800px;
 }
+
 #curriculum-vitae h2 {
   font-size: 2em;
   color: #333;
@@ -141,11 +151,13 @@ footer a:hover {
   line-height: 1.8;
   color: #333;
 }
+
 .stars {
   color: gold; 
   font-size: 24px; 
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
+
 .download-btn {
   display: inline-block;
   margin-top: 20px;
@@ -155,20 +167,21 @@ footer a:hover {
   text-decoration: none; 
   border-radius: 5px; 
 }
+
 .download-btn:hover {
   background-color: #45a049; 
 }
+
 a {
   text-decoration: none; 
-  border-bottom: none; 
   color: blue;
-  text-decoration: none;
   transition: text-decoration 0.3s; 
 }
+
 .cv-link {
   text-decoration: none; 
 }
+
 .cv-link:hover {
   text-decoration: underline; 
-
-
+}
